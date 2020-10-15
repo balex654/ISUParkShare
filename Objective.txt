@@ -1,0 +1,7 @@
+ISU Park Share is an iOS app that allows users to rent out their drive way for parking spaces during ISU football games. A user is able to create an account, login to the app, and are then brought to the home screen of the app. The app will have tab bar navigation with one tab listing all the available parking spots, another allows the listing of a user's parking spot, and a tab with the user's profile. 
+
+When a user creates a spot for listing, they will add an address, number of spots available, price per spot, how long someone can use the spots, and any addtional notes for the renter. 
+
+When a user want to rent a spot, they will select the spot, enter their vehicle make, model, color, and license plate number and the number of vehicles they have. They will confirm the rental and then be brought to Venmo where a payment will set up for them to send to the user renting out the spot. The number of spots will be decremented by the number of vehicles the renter has.
+
+Database tables: User, user vehicles, user parking spots, listed parking spots
