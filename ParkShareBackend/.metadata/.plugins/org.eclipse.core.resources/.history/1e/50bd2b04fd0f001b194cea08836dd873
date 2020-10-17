@@ -1,0 +1,4 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/ParkShare?serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=LiftMateAprilThird2020@BA
+spring.datasource.continue-on-error=true

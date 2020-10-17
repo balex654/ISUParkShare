@@ -1,0 +1,5 @@
+package com.parkshare.backend.dao;
+
+public interface UserRepo {
+
+}

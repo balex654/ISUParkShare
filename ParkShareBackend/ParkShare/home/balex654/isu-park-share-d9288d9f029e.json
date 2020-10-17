@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "isu-park-share",
+  "private_key_id": "d9288d9f029e5812a4eb3f32e07d7cde1f7a6bae",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCbDl9iGlX8jaRO\n8j/dalA3bCAq0tBwmQfZtsUWGx/Hl0vICM/dWHSi4Ojf4okTFKo+6nWTLt+JJOBq\nRdR5Yzsdt5TlQD44kZ1RpweAsZYrEd3Qo5oOfN3Cn+fBoygSFamAya5gAqmsild/\nwaMW0qi4jJhHn6XH+DPagLIwWSY7O9HMJ2StdgpnS+KaassuaKckrC5Kt+bkdTGK\nQWt9rV9qc8ERaKPxNGoyZr512CFrHaY34QCz8rWuCvRZE/pJWmwZtUh/EOQ28Ube\nz74tFnVLEmOssXy5c6mLOOkwccjDNLZmZ8WJGn148gaCwkIhRSg/mug2XUQ60ILS\nmSgycDZjAgMBAAECggEAM2dH4s+FSxUv8AYqev5YOo9reJbsCDALZLdNTj9OwU3c\njyOwuZouDKNQQIyq0bsLl5EFynYDIEWr6j9dKaLmgbsPLxMlrX5Er8GWYKk+9edV\n6GmcVIo7wF5fqBetXJV23J2/489uLaetS0rIBPRwf8IIZ9I61PjpQ9pfeFzNqlvt\niRlvXVqZCj7oCzveEgtrohi1EvQ7gIVjRaP4TVXyQWtoMhYdkerocA2sqGvZ5C2j\nT3k+o9HjoprEPZhHrwF8F3i7S1cZw/RXEp0AQU9mx6lKlFFOg2pytMIfUs2PpsTf\ntXNbKuUW9uZLnQbhH6oDNju42OlBgo094W5/A1IR2QKBgQDV9333gzlV3AOx/j0K\ntfheAN721nfQeSv9TNNZl8Q9Lr9DrKDjud35gj7d/I3AeCVZAopg4XF2ZS/YmrNc\nSkkXzEg8bp2zckRoeOT1EbEl1J/ISb9Y3Pa137iE/g7Sl4/7qTFCCmfIzQpJFGX/\nY+s6aCOoofRrXNqc0XNN1i5gmQKBgQC5hDuCtN5ff1EwRcm2PnYTKxdYrIcJ2wel\nkSlyggfMKT7LpkcG/UutoqU55gjJKwPCsx6efXS4+leRBp4n27GQJeWHjDHUbmxw\nmCWDSLp4SJsN/bcChmWt5TdHIqPhNfcG6VC8J9l9msCS2Zid1pUoMXzPFNjlpFPi\nl1/s5Z7gWwKBgF7QUgiJJLIQUa7hG0mQw2NcfXDiLqu51i1jitBLuVDnUyf46j6f\nUWbMOXGDBYmBdANSZeFyZSXyxtX0D4DZBjS+eFAXMFihTQECeWrDkT1TUA6f52PI\nXqbPYWPFdOoK8WmyWrqKA91uRp2FpYEbVNRH621Bfx7IQbN1+ONIArsZAoGBAJzQ\n4BUempKS5qgtddKtfdW6KSP1wrhcA1y7FhQLQlgbzU8MISIRXrVJtOz6PBcAW09r\nZciHN/Fc/ERFGc+Lb87vmdQ4d66gIN4UXjFZevZOOXNcMiTaQnz6Mv3YlDq9CTE4\na9yAuuHnvDzl3pIdXzv4iQ3rC2UiwR3a42U2vFPdAoGAWYrhSwcjrK8b+PIJ2kLF\nONkoAg8l0PnnC5CzwQ0a/IwcN/CD4BEorfjJcBfWctze53t68G0CwZkDbUAnny3L\n5BqTe8QKv5908jbFbPIhInB4cq03AyFj2QhRZMRSWALS6cPvnr8dJ0hi+DBw7wWW\nrOIpUXRZpZJUcOh2KeSSj04=\n-----END PRIVATE KEY-----\n",
+  "client_email": "isuparkshare@isu-park-share.iam.gserviceaccount.com",
+  "client_id": "105967396203578471470",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/isuparkshare%40isu-park-share.iam.gserviceaccount.com"
+}
