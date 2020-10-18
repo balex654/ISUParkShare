@@ -20,6 +20,15 @@ public class User {
 	
 	@Column(name="username")
 	private String username;
+	
+	@Column(name="email")
+	private String email;
+	
+	@Column(name="password")
+	private String password;
+	
+	@Column(name="venmo_username")
+	private String venmo;
 
 	public long getId() {
 		return id;
@@ -37,9 +46,33 @@ public class User {
 		this.username = username;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getVenmo() {
+		return venmo;
+	}
+
+	public void setVenmo(String venmo) {
+		this.venmo = venmo;
+	}
+
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + "]";
+		return "User [id=" + id + ", username=" + username + ", email=" + email + ", password=" + password + ", venmo="
+				+ venmo + "]";
 	}
-	
 }
