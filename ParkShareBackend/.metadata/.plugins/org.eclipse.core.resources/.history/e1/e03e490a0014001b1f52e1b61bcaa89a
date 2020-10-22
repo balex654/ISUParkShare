@@ -17,7 +17,7 @@ public class UserController {
 	UserRepo rep;
 	
 	@RequestMapping(method = RequestMethod.POST, path = "/createUser")
-	public long createUser(User user) {
+	public String createUser(User user) {
 		String encrypted = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
 		user.setPassword(encrypted);
 		
