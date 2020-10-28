@@ -1,0 +1,6 @@
+module Pods_Park_Share {
+  umbrella header "Pods-Park Share-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KeychainSwift
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -15,17 +16,38 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var createAccount: UIButton!
     
+    let keychain = KeychainSwift()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         activity.stopAnimating()
         email.delegate = self
         password.delegate = self
+        
+        keychain.accessGroup = "Z254ZTLSS9.com.benalexander.Park-Share"
+        
+        checkIfLoggedIn()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
+    }
+    
+    func checkIfLoggedIn() {
+        if let email = keychain.get("email"), let password = keychain.get("password") {
+            if email != "" && password != "" {
+                Variables.user.setUsername(username: keychain.get("username")!)
+                Variables.user.setEmail(email: keychain.get("email")!)
+                Variables.user.setPassword(password: keychain.get("password")!)
+                Variables.user.setUserID(userID: Int64(keychain.get("id")!)!)
+                Variables.user.setVenmo(venmo: keychain.get("venmo")!)
+                
+                let vc = self.storyboard!.instantiateViewController(withIdentifier: "tabController")
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func login(_ sender: Any) {
@@ -61,6 +83,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 Variables.user.setPassword(password: response["password"]!.stringValue)
                 Variables.user.setUserID(userID: response["id"]!.int64Value)
                 Variables.user.setVenmo(venmo: response["venmo"]!.stringValue)
+                
+                self.keychain.set(response["username"]!.stringValue, forKey: "username")
+                self.keychain.set(response["email"]!.stringValue, forKey: "email")
+                self.keychain.set(self.password.text!, forKey: "password")
+                self.keychain.set(String(response["id"]!.int64Value), forKey: "id")
+                self.keychain.set(response["venmo"]!.stringValue, forKey: "venmo")
                 
                 let vc = self.storyboard!.instantiateViewController(withIdentifier: "tabController")
                 self.present(vc, animated: true, completion: nil)

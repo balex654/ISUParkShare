@@ -17,11 +17,13 @@ public class UserController {
 	UserRepo rep;
 	
 	@RequestMapping(method = RequestMethod.POST, path = "/createUser")
-	public void createUser(User user) {
+	public long createUser(User user) {
 		String encrypted = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
 		user.setPassword(encrypted);
 		
 		rep.save(user);
+		
+		return user.getId();
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/checkUser/{email}/{password}")

@@ -19,6 +19,10 @@
 		3D4841422533B49C00B1D293 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4841402533B49C00B1D293 /* LaunchScreen.storyboard */; };
 		3D48414D2533B49C00B1D293 /* Park_ShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48414C2533B49C00B1D293 /* Park_ShareTests.swift */; };
 		3D4841582533B49C00B1D293 /* Park_ShareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4841572533B49C00B1D293 /* Park_ShareUITests.swift */; };
+		3D91D5632549CCAD00CC740B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91D5622549CCAD00CC740B /* ProfileViewController.swift */; };
+		3D91D56C2549D0C000CC740B /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91D56B2549D0C000CC740B /* VehiclesViewController.swift */; };
+		3D91D5712549D1BB00CC740B /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91D5702549D1BB00CC740B /* VehicleTableViewCell.swift */; };
+		4656627CC7B77BD154BA1F6B /* libPods-Park Share.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E4FC63A335B747C6807605 /* libPods-Park Share.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,13 @@
 		3D4841532533B49C00B1D293 /* Park ShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Park ShareUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4841572533B49C00B1D293 /* Park_ShareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park_ShareUITests.swift; sourceTree = "<group>"; };
 		3D4841592533B49C00B1D293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D91D5622549CCAD00CC740B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3D91D56B2549D0C000CC740B /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
+		3D91D5702549D1BB00CC740B /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
+		3DA2C5E32549C29B00C55C12 /* Park Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Park Share.entitlements"; sourceTree = "<group>"; };
+		52E4FC63A335B747C6807605 /* libPods-Park Share.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Park Share.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		739E6C32A86C689F9813A8A3 /* Pods-Park Share.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Park Share.release.xcconfig"; path = "Target Support Files/Pods-Park Share/Pods-Park Share.release.xcconfig"; sourceTree = "<group>"; };
+		8E8299BA2DA37F4710855A3F /* Pods-Park Share.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Park Share.debug.xcconfig"; path = "Target Support Files/Pods-Park Share/Pods-Park Share.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4656627CC7B77BD154BA1F6B /* libPods-Park Share.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +96,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BF549FBF00324FB196AE7A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52E4FC63A335B747C6807605 /* libPods-Park Share.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		329751639E67E008E10B364F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E8299BA2DA37F4710855A3F /* Pods-Park Share.debug.xcconfig */,
+				739E6C32A86C689F9813A8A3 /* Pods-Park Share.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3D3B354E2540FC6900D92761 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +137,8 @@
 				3D48414B2533B49C00B1D293 /* Park ShareTests */,
 				3D4841562533B49C00B1D293 /* Park ShareUITests */,
 				3D4841332533B49C00B1D293 /* Products */,
+				329751639E67E008E10B364F /* Pods */,
+				1BF549FBF00324FB196AE7A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +155,8 @@
 		3D4841342533B49C00B1D293 /* Park Share */ = {
 			isa = PBXGroup;
 			children = (
+				3D91D5672549D08600CC740B /* Profile */,
+				3DA2C5E32549C29B00C55C12 /* Park Share.entitlements */,
 				3D3B354F2540FC7100D92761 /* InitialScreens */,
 				3D3B354E2540FC6900D92761 /* Models */,
 				3D4841352533B49C00B1D293 /* AppDelegate.swift */,
@@ -156,6 +189,16 @@
 			path = "Park ShareUITests";
 			sourceTree = "<group>";
 		};
+		3D91D5672549D08600CC740B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3D91D5622549CCAD00CC740B /* ProfileViewController.swift */,
+				3D91D56B2549D0C000CC740B /* VehiclesViewController.swift */,
+				3D91D5702549D1BB00CC740B /* VehicleTableViewCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D48415C2533B49D00B1D293 /* Build configuration list for PBXNativeTarget "Park Share" */;
 			buildPhases = (
+				FBA81C5CC060B394F2A71D7A /* [CP] Check Pods Manifest.lock */,
 				3D48412E2533B49C00B1D293 /* Sources */,
 				3D48412F2533B49C00B1D293 /* Frameworks */,
 				3D4841302533B49C00B1D293 /* Resources */,
@@ -281,17 +325,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FBA81C5CC060B394F2A71D7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Park Share-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D48412E2533B49C00B1D293 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D91D56C2549D0C000CC740B /* VehiclesViewController.swift in Sources */,
 				3D3B35622541047900D92761 /* CreateAccountViewController.swift in Sources */,
 				3D48413A2533B49C00B1D293 /* LoginViewController.swift in Sources */,
 				3D4841362533B49C00B1D293 /* AppDelegate.swift in Sources */,
 				3D3B35512540FC9700D92761 /* User.swift in Sources */,
 				3D4841382533B49C00B1D293 /* SceneDelegate.swift in Sources */,
+				3D91D5712549D1BB00CC740B /* VehicleTableViewCell.swift in Sources */,
 				3D3B354A2540FAC300D92761 /* SwiftyJSON.swift in Sources */,
+				3D91D5632549CCAD00CC740B /* ProfileViewController.swift in Sources */,
 				3D3B35452540F8D300D92761 /* Variables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,9 +537,11 @@
 		};
 		3D48415D2533B49D00B1D293 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E8299BA2DA37F4710855A3F /* Pods-Park Share.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Park Share/Park Share.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = Z254ZTLSS9;
@@ -485,9 +559,11 @@
 		};
 		3D48415E2533B49D00B1D293 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 739E6C32A86C689F9813A8A3 /* Pods-Park Share.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Park Share/Park Share.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = Z254ZTLSS9;

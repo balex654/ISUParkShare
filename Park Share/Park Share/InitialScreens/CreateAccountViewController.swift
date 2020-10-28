@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KeychainSwift
 
 class CreateAccountViewController: UIViewController, UITextFieldDelegate {
 
@@ -18,6 +19,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var activity: UIActivityIndicatorView!
     
     let pwInfoAlert = UIAlertController(title: "Your password must have:\nat least 8 characters\nno spaces\nat least one number\n at least one letter", message: nil, preferredStyle: .alert)
+    let keychain = KeychainSwift()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         venmo.delegate = self
         password.delegate = self
         confirm.delegate = self
+        
+        keychain.accessGroup = "Z254ZTLSS9.com.benalexander.Park-Share"
     }
     
     func textFieldShouldReturn(_ firstName: UITextField) -> Bool {
@@ -184,6 +188,12 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         Variables.user.setPassword(password: password.text!)
         Variables.user.setVenmo(venmo: venmo.text!)
         Variables.user.setUserID(userID: Int64(response)!)
+        
+        self.keychain.set(username.text!, forKey: "username")
+        self.keychain.set(email.text!, forKey: "email")
+        self.keychain.set(password.text!, forKey: "password")
+        self.keychain.set(response, forKey: "id")
+        self.keychain.set(venmo.text!, forKey: "venmo")
         
         username.text = ""
         email.text = ""

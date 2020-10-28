@@ -1,5 +1,0 @@
-package com.parkshare.backend;
-
-public class SecurityConfig {
-
-}

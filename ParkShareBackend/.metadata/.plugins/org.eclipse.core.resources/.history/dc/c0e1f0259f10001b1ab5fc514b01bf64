@@ -1,5 +1,0 @@
-package com.parkshare.backend.controllers;
-
-public class UserController {
-
-}
