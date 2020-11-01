@@ -183,21 +183,126 @@
             </objects>
             <point key="canvasLocation" x="1048.8" y="882.90854572713647"/>
         </scene>
-        <!--Item 2-->
+        <!--Listed Parking Areas-->
         <scene sceneID="XnL-1d-2My">
             <objects>
-                <viewController id="Pgw-px-y00" sceneMemberID="viewController">
+                <viewController id="Pgw-px-y00" customClass="ListedAreasViewController" customModule="Park_Share" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4ul-of-S0d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ycG-cT-0TE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListedAreasTableViewCell" rowHeight="145" id="Dtm-KE-cGt" customClass="ListedAreasTableViewCell" customModule="Park_Share" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dtm-KE-cGt" id="LSd-yk-697">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Address" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmP-U4-0M3">
+                                                    <rect key="frame" x="16" y="11" width="343" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Total Spots Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41a-VQ-hCr">
+                                                    <rect key="frame" x="16" y="31.5" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Spots Taken" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vls-uY-xqD">
+                                                    <rect key="frame" x="16" y="52.5" width="343" height="40.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Start Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWl-SM-tD7">
+                                                    <rect key="frame" x="16" y="93" width="343" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="End Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjH-ts-5t3">
+                                                    <rect key="frame" x="16" y="113.5" width="343" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vls-uY-xqD" firstAttribute="leading" secondItem="LSd-yk-697" secondAttribute="leadingMargin" id="0ng-OU-W8U"/>
+                                                <constraint firstItem="41a-VQ-hCr" firstAttribute="leading" secondItem="LSd-yk-697" secondAttribute="leadingMargin" id="4ug-Hd-6IE"/>
+                                                <constraint firstItem="EjH-ts-5t3" firstAttribute="leading" secondItem="LSd-yk-697" secondAttribute="leadingMargin" id="6J1-8M-viS"/>
+                                                <constraint firstItem="HmP-U4-0M3" firstAttribute="leading" secondItem="LSd-yk-697" secondAttribute="leadingMargin" id="9dM-xD-RN4"/>
+                                                <constraint firstItem="vls-uY-xqD" firstAttribute="trailing" secondItem="LSd-yk-697" secondAttribute="trailingMargin" id="AEq-4C-Le1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EjH-ts-5t3" secondAttribute="bottom" id="GEn-h3-LTW"/>
+                                                <constraint firstItem="vls-uY-xqD" firstAttribute="top" secondItem="41a-VQ-hCr" secondAttribute="bottom" id="GjB-FE-zVp"/>
+                                                <constraint firstItem="EjH-ts-5t3" firstAttribute="trailing" secondItem="LSd-yk-697" secondAttribute="trailingMargin" id="OBX-J6-mUe"/>
+                                                <constraint firstItem="BWl-SM-tD7" firstAttribute="top" secondItem="vls-uY-xqD" secondAttribute="bottom" id="Plz-5A-rhs"/>
+                                                <constraint firstItem="BWl-SM-tD7" firstAttribute="leading" secondItem="LSd-yk-697" secondAttribute="leadingMargin" id="TyL-by-s8s"/>
+                                                <constraint firstItem="41a-VQ-hCr" firstAttribute="top" secondItem="HmP-U4-0M3" secondAttribute="bottom" id="a64-ag-LhA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HmP-U4-0M3" secondAttribute="trailing" id="g2I-2e-zfn"/>
+                                                <constraint firstItem="BWl-SM-tD7" firstAttribute="trailing" secondItem="LSd-yk-697" secondAttribute="trailingMargin" id="kd9-wS-bYU"/>
+                                                <constraint firstItem="EjH-ts-5t3" firstAttribute="top" secondItem="BWl-SM-tD7" secondAttribute="bottom" id="ldS-Nj-mnw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="41a-VQ-hCr" secondAttribute="trailing" id="lui-yN-xuG"/>
+                                                <constraint firstItem="HmP-U4-0M3" firstAttribute="top" secondItem="LSd-yk-697" secondAttribute="topMargin" id="oe8-Mn-9Mx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="address" destination="HmP-U4-0M3" id="oYF-81-5Jh"/>
+                                            <outlet property="endDate" destination="EjH-ts-5t3" id="tnF-Bq-O4z"/>
+                                            <outlet property="spotsAvailable" destination="41a-VQ-hCr" id="rOp-42-E16"/>
+                                            <outlet property="spotsTaken" destination="vls-uY-xqD" id="deT-f6-bHc"/>
+                                            <outlet property="startDate" destination="BWl-SM-tD7" id="MHq-zm-Yr9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pgw-px-y00" id="qnE-QW-SLl"/>
+                                    <outlet property="delegate" destination="Pgw-px-y00" id="BJy-rJ-mW5"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hVt-fg-KSE">
+                                <rect key="frame" x="100" y="200" width="175" height="218"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f70-I5-nUp">
+                                <rect key="frame" x="117" y="578" width="141" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sAt-Ls-RIv"/>
+                                </constraints>
+                                <state key="normal" title="List a parking area"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5Ye-1L-iNW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f70-I5-nUp" firstAttribute="top" secondItem="hVt-fg-KSE" secondAttribute="bottom" constant="160" id="0oi-7d-D1D"/>
+                            <constraint firstItem="hVt-fg-KSE" firstAttribute="top" secondItem="5Ye-1L-iNW" secondAttribute="top" constant="200" id="3Fj-32-fFD"/>
+                            <constraint firstItem="ycG-cT-0TE" firstAttribute="trailing" secondItem="5Ye-1L-iNW" secondAttribute="trailing" id="8Vw-49-MOs"/>
+                            <constraint firstItem="5Ye-1L-iNW" firstAttribute="trailing" secondItem="hVt-fg-KSE" secondAttribute="trailing" constant="100" id="EpI-QW-Zlm"/>
+                            <constraint firstItem="5Ye-1L-iNW" firstAttribute="bottom" secondItem="f70-I5-nUp" secondAttribute="bottom" constant="10" id="F9C-gh-VTT"/>
+                            <constraint firstItem="ycG-cT-0TE" firstAttribute="leading" secondItem="5Ye-1L-iNW" secondAttribute="leading" id="Gb1-Vv-vro"/>
+                            <constraint firstItem="hVt-fg-KSE" firstAttribute="leading" secondItem="5Ye-1L-iNW" secondAttribute="leading" constant="100" id="dDn-mD-X0V"/>
+                            <constraint firstItem="f70-I5-nUp" firstAttribute="leading" secondItem="5Ye-1L-iNW" secondAttribute="leading" constant="117" id="dYn-vQ-2Vx"/>
+                            <constraint firstItem="5Ye-1L-iNW" firstAttribute="trailing" secondItem="f70-I5-nUp" secondAttribute="trailing" constant="117" id="dqP-hg-2qg"/>
+                            <constraint firstItem="ycG-cT-0TE" firstAttribute="top" secondItem="5Ye-1L-iNW" secondAttribute="top" id="j5W-GI-soF"/>
+                            <constraint firstItem="ycG-cT-0TE" firstAttribute="bottom" secondItem="5Ye-1L-iNW" secondAttribute="bottom" id="rT6-NX-f9U"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="uHm-o6-fCR"/>
+                    <tabBarItem key="tabBarItem" title="Listed Parking Areas" selectedImage="plus" catalog="system" id="uHm-o6-fCR"/>
+                    <connections>
+                        <outlet property="activity" destination="hVt-fg-KSE" id="1Hg-Dw-GaN"/>
+                        <outlet property="listParking" destination="f70-I5-nUp" id="9IL-Xj-jgi"/>
+                        <outlet property="tableView" destination="ycG-cT-0TE" id="AbR-1A-dFX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGG-QK-aen" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3095" y="423"/>
+            <point key="canvasLocation" x="3093.5999999999999" y="422.33883058470769"/>
         </scene>
         <!--Profile-->
         <scene sceneID="q8E-yx-PUK">
@@ -553,7 +658,7 @@
             </objects>
             <point key="canvasLocation" x="3925.5999999999999" y="1844.5277361319343"/>
         </scene>
-        <!--Item 1-->
+        <!--All Parking Areas-->
         <scene sceneID="5Ir-OS-uTw">
             <objects>
                 <viewController id="yDD-zR-b1k" sceneMemberID="viewController">
@@ -563,7 +668,7 @@
                         <viewLayoutGuide key="safeArea" id="Eyp-iT-6Qg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="4qK-4i-Pae"/>
+                    <tabBarItem key="tabBarItem" title="All Parking Areas" selectedImage="car.2" catalog="system" id="4qK-4i-Pae"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwd-kb-D87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -608,7 +713,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="car.2" catalog="system" width="128" height="72"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

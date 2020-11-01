@@ -40,6 +40,7 @@ create table ListedParking (
     user_id bigint,
     start_time datetime,
     end_time datetime,
+    spots_taken int,
     primary key(id),
     foreign key(user_id) references User(id) on delete cascade,
     foreign key(area_id) references ParkingArea(id) on delete cascade
