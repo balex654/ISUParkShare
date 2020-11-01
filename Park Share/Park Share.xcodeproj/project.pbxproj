@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0C4597254F234D008D237D /* ParkingAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0C4596254F234D008D237D /* ParkingAreaViewController.swift */; };
+		3D0C459C254F2390008D237D /* ParkingAreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0C459B254F2390008D237D /* ParkingAreaTableViewCell.swift */; };
 		3D3B35452540F8D300D92761 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3B35442540F8D300D92761 /* Variables.swift */; };
 		3D3B354A2540FAC300D92761 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3B35492540FAC300D92761 /* SwiftyJSON.swift */; };
 		3D3B35512540FC9700D92761 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3B35502540FC9700D92761 /* User.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D0C4596254F234D008D237D /* ParkingAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingAreaViewController.swift; sourceTree = "<group>"; };
+		3D0C459B254F2390008D237D /* ParkingAreaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingAreaTableViewCell.swift; sourceTree = "<group>"; };
 		3D3B35442540F8D300D92761 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		3D3B35492540FAC300D92761 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		3D3B35502540FC9700D92761 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 				3D91D5622549CCAD00CC740B /* ProfileViewController.swift */,
 				3D91D56B2549D0C000CC740B /* VehiclesViewController.swift */,
 				3D91D5702549D1BB00CC740B /* VehicleTableViewCell.swift */,
+				3D0C4596254F234D008D237D /* ParkingAreaViewController.swift */,
+				3D0C459B254F2390008D237D /* ParkingAreaTableViewCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -360,7 +366,9 @@
 				3D48413A2533B49C00B1D293 /* LoginViewController.swift in Sources */,
 				3D4841362533B49C00B1D293 /* AppDelegate.swift in Sources */,
 				3D3B35512540FC9700D92761 /* User.swift in Sources */,
+				3D0C459C254F2390008D237D /* ParkingAreaTableViewCell.swift in Sources */,
 				3D4841382533B49C00B1D293 /* SceneDelegate.swift in Sources */,
+				3D0C4597254F234D008D237D /* ParkingAreaViewController.swift in Sources */,
 				3D91D5712549D1BB00CC740B /* VehicleTableViewCell.swift in Sources */,
 				3D3B354A2540FAC300D92761 /* SwiftyJSON.swift in Sources */,
 				3D91D5632549CCAD00CC740B /* ProfileViewController.swift in Sources */,
