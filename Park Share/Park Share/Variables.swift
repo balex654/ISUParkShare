@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct Variables {
-    static var baseURL: String = "http://192.168.1.23:8080/"
+    static var baseURL: String = "http://192.168.1.12:8080/"
     //static var baseURL: String = "https://isu-park-share-2.uc.r.appspot.com/"
     
     static var serverUsername: String = "ISUParkShareBasicAuthAdmin"

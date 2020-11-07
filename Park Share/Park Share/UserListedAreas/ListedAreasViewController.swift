@@ -17,7 +17,6 @@ class ListedAreasViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.addSubview(refreshControl)
     }
     
@@ -72,8 +71,8 @@ class ListedAreasViewController: UIViewController, UITableViewDelegate, UITableV
                     area["address"] = r["address"].stringValue
                     area["spotsAvailable"] = r["num_spots"].intValue
                     area["spotsTaken"] = r["spot_taken"].intValue
-                    area["startDate"] = r["start_time"].stringValue
-                    area["endDate"] = r["end_time"].stringValue
+                    area["startDate"] = self.convertDate(date: r["start_time"].stringValue)
+                    area["endDate"] = self.convertDate(date: r["end_time"].stringValue)
                     self.areas.append(area)
                 }
                 self.activity.stopAnimating()
@@ -86,5 +85,20 @@ class ListedAreasViewController: UIViewController, UITableViewDelegate, UITableV
         }
         task.resume()
     }
-
+    
+    func convertDate(date: String) -> String {
+        var subDate = date.prefix(19)
+        subDate += "-0600"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let originalDate = dateFormatter.date(from: String(subDate))
+        dateFormatter.dateFormat = "MMM d, h:mm a"
+        let newDateStr = dateFormatter.string(from: originalDate!)
+        return newDateStr
+    }
 }
+
+/*
+ List parking: select parking area, set start date/end date
+ Remove areas that are past date
+ */
