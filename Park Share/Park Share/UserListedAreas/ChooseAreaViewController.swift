@@ -66,6 +66,9 @@ class ChooseAreaViewController: UIViewController, UITableViewDataSource, UITable
         else if startDate.date >= endDate.date {
             alert(message: "The start date is later than the end date")
         }
+        else if endDate.date < Date() {
+            alert(message: "The end date is before the current date")
+        }
         else {
             let urlStr = Variables.baseURL + "getUserListedParking/" + String(Variables.user.getUserID())
             let request = prepareHTTPRequest(urlStr: urlStr, httpMethod: "GET")

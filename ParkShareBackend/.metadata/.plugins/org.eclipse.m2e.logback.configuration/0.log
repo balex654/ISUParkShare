@@ -1799,3 +1799,8 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: in comment 
 2020-11-08 12:43:38,626 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2020-11-08 12:43:38,628 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-11-08 12:43:38,628 [Worker-47: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/benalexander/School/ComS454/Project/ParkShareBackend/ParkShare/src/test/resources
+2020-11-08 12:46:20,979 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-08 12:46:20,983 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-08 12:46:20,984 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-08 12:46:20,985 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-08 12:46:20,986 [Worker-52: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/benalexander/School/ComS454/Project/ParkShareBackend/ParkShare/src/test/resources
