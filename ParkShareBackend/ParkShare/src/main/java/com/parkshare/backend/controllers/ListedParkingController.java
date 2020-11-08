@@ -1,5 +1,9 @@
 package com.parkshare.backend.controllers;
 
+import java.math.BigInteger;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -24,7 +28,24 @@ public class ListedParkingController {
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/getUserListedParking/{userID}")
-	public List<Map<String, Object>> getUserListedParking(@PathVariable("userID") long userID) {
+	public List<Map<String, Object>> getUserListedParking(@PathVariable("userID") long userID) throws ParseException {
+		
+		// Get rows, find ones with end_time less than current_time, delete these rows
+		List<Map<String, Object>> rows = rep.getUserListedParking(userID);
+		List<Map<String, Object>> outdated = new ArrayList<Map<String, Object>>();
+		for (Map<String, Object> row : rows) {
+			Timestamp endTimestamp = (Timestamp) row.get("end_time");
+			endTimestamp.setTime(endTimestamp.getTime() + 21600000);
+			Timestamp currentTimestamp = new Timestamp(System.currentTimeMillis());
+			if (currentTimestamp.after(endTimestamp)) {
+				outdated.add(row);
+			}
+		}
+		
+		for (Map<String, Object> delete : outdated) {
+			rep.deleteListedParking(((BigInteger) delete.get("id")).longValue());
+		}
+		
 		return rep.getUserListedParking(userID);
 	}
 }

@@ -296,7 +296,7 @@
                             <constraint firstItem="ycG-cT-0TE" firstAttribute="bottom" secondItem="5Ye-1L-iNW" secondAttribute="bottom" id="rT6-NX-f9U"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Listed Parking Areas" selectedImage="plus" catalog="system" id="uHm-o6-fCR"/>
+                    <tabBarItem key="tabBarItem" title="Listed Parking Areas" image="plus" catalog="system" selectedImage="plus" id="uHm-o6-fCR"/>
                     <connections>
                         <outlet property="activity" destination="hVt-fg-KSE" id="1Hg-Dw-GaN"/>
                         <outlet property="tableView" destination="ycG-cT-0TE" id="AbR-1A-dFX"/>
@@ -800,7 +800,7 @@
                         <viewLayoutGuide key="safeArea" id="Eyp-iT-6Qg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="All Parking Areas" selectedImage="car.2" catalog="system" id="4qK-4i-Pae"/>
+                    <tabBarItem key="tabBarItem" title="All Parking Areas" image="car.2" catalog="system" selectedImage="car.2" id="4qK-4i-Pae"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwd-kb-D87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

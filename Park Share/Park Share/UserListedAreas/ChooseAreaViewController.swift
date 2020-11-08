@@ -113,6 +113,7 @@ class ChooseAreaViewController: UIViewController, UITableViewDataSource, UITable
                     return
                 }
                 self.dismiss(animated: true, completion: nil)
+                NotificationCenter.default.post(name: Notification.Name("listedParkingArea"), object: nil)
             }
         }
         task.resume()
