@@ -32,6 +32,30 @@ public class ListedParkingController {
 		
 		// Get rows, find ones with end_time less than current_time, delete these rows
 		List<Map<String, Object>> rows = rep.getUserListedParking(userID);
+		List<Map<String, Object>> outdated = findOutdatedRows(rows);
+		
+		for (Map<String, Object> delete : outdated) {
+			rep.deleteListedParking(((BigInteger) delete.get("id")).longValue());
+		}
+		
+		return rep.getUserListedParking(userID);
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, path = "/getAllListedParking")
+	public List<Map<String, Object>> getAllListedParking() {
+		
+		// Get rows, find ones with end_time less than current_time, delete these rows
+		List<Map<String, Object>> rows = rep.getAllListedParking();
+		List<Map<String, Object>> outdated = findOutdatedRows(rows);
+		
+		for (Map<String, Object> delete : outdated) {
+			rep.deleteListedParking(((BigInteger) delete.get("id")).longValue());
+		}
+		
+		return rep.getAllListedParking();
+	}
+	
+	public static List<Map<String, Object>> findOutdatedRows(List<Map<String, Object>> rows) {
 		List<Map<String, Object>> outdated = new ArrayList<Map<String, Object>>();
 		for (Map<String, Object> row : rows) {
 			Timestamp endTimestamp = (Timestamp) row.get("end_time");
@@ -41,11 +65,7 @@ public class ListedParkingController {
 				outdated.add(row);
 			}
 		}
-		
-		for (Map<String, Object> delete : outdated) {
-			rep.deleteListedParking(((BigInteger) delete.get("id")).longValue());
-		}
-		
-		return rep.getUserListedParking(userID);
+				
+		return outdated;
 	}
 }

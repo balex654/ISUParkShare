@@ -28,6 +28,9 @@
 		3D91D5712549D1BB00CC740B /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91D5702549D1BB00CC740B /* VehicleTableViewCell.swift */; };
 		3DCD4B582557395D0087EACA /* ChooseAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD4B572557395D0087EACA /* ChooseAreaViewController.swift */; };
 		3DCD4B5D2557397D0087EACA /* ChooseAreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD4B5C2557397D0087EACA /* ChooseAreaTableViewCell.swift */; };
+		3DD193542559B5FF00A4FC87 /* AllParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD193532559B5FF00A4FC87 /* AllParkingViewController.swift */; };
+		3DD193592559B61700A4FC87 /* AllParkingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD193582559B61700A4FC87 /* AllParkingTableViewCell.swift */; };
+		3DD1935E2559BFBC00A4FC87 /* AreaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1935D2559BFBC00A4FC87 /* AreaDetailsViewController.swift */; };
 		4656627CC7B77BD154BA1F6B /* libPods-Park Share.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E4FC63A335B747C6807605 /* libPods-Park Share.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,9 @@
 		3DA2C5E32549C29B00C55C12 /* Park Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Park Share.entitlements"; sourceTree = "<group>"; };
 		3DCD4B572557395D0087EACA /* ChooseAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAreaViewController.swift; sourceTree = "<group>"; };
 		3DCD4B5C2557397D0087EACA /* ChooseAreaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAreaTableViewCell.swift; sourceTree = "<group>"; };
+		3DD193532559B5FF00A4FC87 /* AllParkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllParkingViewController.swift; sourceTree = "<group>"; };
+		3DD193582559B61700A4FC87 /* AllParkingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllParkingTableViewCell.swift; sourceTree = "<group>"; };
+		3DD1935D2559BFBC00A4FC87 /* AreaDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDetailsViewController.swift; sourceTree = "<group>"; };
 		52E4FC63A335B747C6807605 /* libPods-Park Share.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Park Share.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		739E6C32A86C689F9813A8A3 /* Pods-Park Share.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Park Share.release.xcconfig"; path = "Target Support Files/Pods-Park Share/Pods-Park Share.release.xcconfig"; sourceTree = "<group>"; };
 		8E8299BA2DA37F4710855A3F /* Pods-Park Share.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Park Share.debug.xcconfig"; path = "Target Support Files/Pods-Park Share/Pods-Park Share.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 		3D4841342533B49C00B1D293 /* Park Share */ = {
 			isa = PBXGroup;
 			children = (
+				3DD193522559B5D600A4FC87 /* RentParking */,
 				3D0C45A0254F462D008D237D /* UserListedAreas */,
 				3D91D5672549D08600CC740B /* Profile */,
 				3DA2C5E32549C29B00C55C12 /* Park Share.entitlements */,
@@ -223,6 +230,16 @@
 				3D0C459B254F2390008D237D /* ParkingAreaTableViewCell.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		3DD193522559B5D600A4FC87 /* RentParking */ = {
+			isa = PBXGroup;
+			children = (
+				3DD193532559B5FF00A4FC87 /* AllParkingViewController.swift */,
+				3DD193582559B61700A4FC87 /* AllParkingTableViewCell.swift */,
+				3DD1935D2559BFBC00A4FC87 /* AreaDetailsViewController.swift */,
+			);
+			path = RentParking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +405,8 @@
 				3D3B35512540FC9700D92761 /* User.swift in Sources */,
 				3DCD4B5D2557397D0087EACA /* ChooseAreaTableViewCell.swift in Sources */,
 				3D0C459C254F2390008D237D /* ParkingAreaTableViewCell.swift in Sources */,
+				3DD193542559B5FF00A4FC87 /* AllParkingViewController.swift in Sources */,
+				3DD1935E2559BFBC00A4FC87 /* AreaDetailsViewController.swift in Sources */,
 				3D4841382533B49C00B1D293 /* SceneDelegate.swift in Sources */,
 				3D0C45A7254F4707008D237D /* ListedAreasTableViewCell.swift in Sources */,
 				3DCD4B582557395D0087EACA /* ChooseAreaViewController.swift in Sources */,
@@ -396,6 +415,7 @@
 				3D3B354A2540FAC300D92761 /* SwiftyJSON.swift in Sources */,
 				3D91D5632549CCAD00CC740B /* ProfileViewController.swift in Sources */,
 				3D3B35452540F8D300D92761 /* Variables.swift in Sources */,
+				3DD193592559B61700A4FC87 /* AllParkingTableViewCell.swift in Sources */,
 				3D0C45A2254F4670008D237D /* ListedAreasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,7 +595,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Park Share/Park Share.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Z254ZTLSS9;
 				INFOPLIST_FILE = "Park Share/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -597,7 +617,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Park Share/Park Share.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Z254ZTLSS9;
 				INFOPLIST_FILE = "Park Share/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
