@@ -31,6 +31,10 @@ class AreaDetailsViewController: UIViewController {
     var venmoStr = String()
     var notesStr = String()
     
+    var totalSpotsInt = 0
+    var numTakenInt = 0
+    var listedAreaId: Int64 = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,5 +80,12 @@ class AreaDetailsViewController: UIViewController {
     func centerToLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 1000) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         map.setRegion(coordinateRegion, animated: true)
+    }
+    
+    @IBAction func rent(_ sender: Any) {
+        let vc = self.storyboard!.instantiateViewController(identifier: "ChooseVehicles") as! ChooseVehiclesViewController
+        vc.spotsAvailable = totalSpotsInt - numTakenInt
+        vc.listedAreaId = self.listedAreaId
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

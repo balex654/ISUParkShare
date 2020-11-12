@@ -49,6 +49,10 @@ class AllParkingViewController: UIViewController, UITableViewDelegate, UITableVi
         vc.venmoStr = "Venmo Username: " + (areas[indexPath.row]["venmo"] as? String)!
         vc.notesStr = "Notes: " + (areas[indexPath.row]["notes"] as? String)!
         
+        vc.totalSpotsInt = areas[indexPath.row]["spotsAvailable"] as! Int
+        vc.numTakenInt = areas[indexPath.row]["spotsTaken"] as! Int
+        vc.listedAreaId = areas[indexPath.row]["id"] as! Int64
+        
         self.navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -68,7 +72,7 @@ class AllParkingViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func getAreas(group: DispatchGroup?) {
-        let urlStr = Variables.baseURL + "getAllListedParking"
+        let urlStr = Variables.baseURL + "getAllListedParking/" + String(Variables.user.getUserID())
         let request = prepareHTTPRequest(urlStr: urlStr, httpMethod: "GET")
         
         let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
@@ -91,6 +95,7 @@ class AllParkingViewController: UIViewController, UITableViewDelegate, UITableVi
                     area["notes"] = r["notes"].stringValue
                     area["username"] = r["username"].stringValue
                     area["venmo"] = r["venmo_username"].stringValue
+                    area["id"] = r["id"].int64Value
                     self.areas.append(area)
                 }
                 self.activity.stopAnimating()

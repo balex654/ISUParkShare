@@ -21,11 +21,16 @@ public interface ListedParkingRepo extends JpaRepository<ListedParking, Long> {
 	List<Map<String, Object>> getUserListedParking(@Param("userID") Long userID);
 	
 	@Query(value = "select lp.id, pa.address, pa.num_spots, lp.spot_taken, lp.start_time, lp.end_time, pa.price_per_spot, pa.notes, u.username, u.venmo_username from\n" + 
-			"ParkingArea pa inner join ListedParking lp on pa.id = lp.area_id inner join User u on pa.user_id = u.id", nativeQuery = true)
-	List<Map<String, Object>> getAllListedParking();
+			"ParkingArea pa inner join ListedParking lp on pa.id = lp.area_id inner join User u on pa.user_id = u.id where u.id != :userID", nativeQuery = true)
+	List<Map<String, Object>> getAllListedParking(@Param("userID") Long userID);
 	
 	@Transactional
 	@Modifying
 	@Query(value = "delete from ListedParking where id = :id", nativeQuery = true)
 	void deleteListedParking(@Param("id") Long id);
+	
+	@Transactional
+	@Modifying
+	@Query(value = "update ListedParking set spot_taken = spot_taken + :spotsTaken where id = :id", nativeQuery = true)
+	void updateNumSpots(@Param("id") Long id, @Param("spotsTaken") Integer spotsTaken);
 }

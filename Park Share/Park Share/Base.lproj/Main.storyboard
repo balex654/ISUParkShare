@@ -982,6 +982,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5I-Ua-nAe">
                                 <rect key="frame" x="120" y="632" width="135" height="30"/>
                                 <state key="normal" title="Rent Spot(s)"/>
+                                <connections>
+                                    <action selector="rent:" destination="x7p-KA-eJC" eventType="touchUpInside" id="esn-d4-aKn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KmY-EO-TO5"/>
@@ -1037,7 +1040,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFu-VM-CXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4818" y="-255"/>
+            <point key="canvasLocation" x="4756" y="-255"/>
+        </scene>
+        <!--Choose Vehicle(s)-->
+        <scene sceneID="KOo-mQ-rOA">
+            <objects>
+                <viewController storyboardIdentifier="ChooseVehicles" id="XC5-eB-hnI" customClass="ChooseVehiclesViewController" customModule="Park_Share" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="blr-hJ-XaB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IHJ-rL-bnX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChooseVehiclesTableViewCell" rowHeight="80" id="8td-jh-2qO" customClass="ChooseVehiclesTableViewCell" customModule="Park_Share" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8td-jh-2qO" id="0Qe-3z-HOn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make and Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1A-W0-3Iy">
+                                                    <rect key="frame" x="16" y="11" width="343" height="58"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="r1A-W0-3Iy" firstAttribute="top" secondItem="0Qe-3z-HOn" secondAttribute="topMargin" id="0nS-lk-Ahg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="r1A-W0-3Iy" secondAttribute="bottom" id="DrE-2m-gzQ"/>
+                                                <constraint firstItem="r1A-W0-3Iy" firstAttribute="leading" secondItem="0Qe-3z-HOn" secondAttribute="leadingMargin" id="RLe-a1-Mq9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="r1A-W0-3Iy" secondAttribute="trailing" id="nIx-Ha-Kc3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="makeAndModel" destination="r1A-W0-3Iy" id="n56-CC-66E"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XC5-eB-hnI" id="lnk-V6-Cnb"/>
+                                    <outlet property="delegate" destination="XC5-eB-hnI" id="rVn-GU-YZA"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="5xk-Ye-jmN">
+                                <rect key="frame" x="100" y="200" width="175" height="267"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ss6-kv-ubt">
+                                <rect key="frame" x="150" y="627" width="75" height="30"/>
+                                <state key="normal" title="Rent"/>
+                                <connections>
+                                    <action selector="rent:" destination="XC5-eB-hnI" eventType="touchUpInside" id="Tmc-KP-QjC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BO7-MC-vag"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BO7-MC-vag" firstAttribute="bottom" secondItem="IHJ-rL-bnX" secondAttribute="bottom" id="2vN-1s-pLh"/>
+                            <constraint firstItem="5xk-Ye-jmN" firstAttribute="leading" secondItem="BO7-MC-vag" secondAttribute="leading" constant="100" id="DJU-V3-Plp"/>
+                            <constraint firstItem="5xk-Ye-jmN" firstAttribute="top" secondItem="BO7-MC-vag" secondAttribute="top" constant="200" id="Ff4-RP-elb"/>
+                            <constraint firstItem="BO7-MC-vag" firstAttribute="bottom" secondItem="Ss6-kv-ubt" secondAttribute="bottom" constant="10" id="JRG-MS-RUf"/>
+                            <constraint firstItem="BO7-MC-vag" firstAttribute="trailing" secondItem="IHJ-rL-bnX" secondAttribute="trailing" id="UWv-2e-03c"/>
+                            <constraint firstItem="Ss6-kv-ubt" firstAttribute="leading" secondItem="BO7-MC-vag" secondAttribute="leading" constant="150" id="Y9X-To-Z0b"/>
+                            <constraint firstItem="BO7-MC-vag" firstAttribute="trailing" secondItem="Ss6-kv-ubt" secondAttribute="trailing" constant="150" id="ZvM-Mi-hNk"/>
+                            <constraint firstItem="IHJ-rL-bnX" firstAttribute="leading" secondItem="BO7-MC-vag" secondAttribute="leading" id="kVO-gO-iVV"/>
+                            <constraint firstItem="BO7-MC-vag" firstAttribute="bottom" secondItem="5xk-Ye-jmN" secondAttribute="bottom" constant="200" id="nfn-eV-uln"/>
+                            <constraint firstItem="IHJ-rL-bnX" firstAttribute="top" secondItem="BO7-MC-vag" secondAttribute="top" id="wFW-zW-1Id"/>
+                            <constraint firstItem="BO7-MC-vag" firstAttribute="trailing" secondItem="5xk-Ye-jmN" secondAttribute="trailing" constant="100" id="wKN-Nn-vRl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose Vehicle(s)" id="9bI-Wf-cDh"/>
+                    <connections>
+                        <outlet property="activity" destination="5xk-Ye-jmN" id="4zO-DG-f0g"/>
+                        <outlet property="tableView" destination="IHJ-rL-bnX" id="uLh-hw-Wa8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BpR-II-VDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5557.6000000000004" y="-255.02248875562222"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gen-o2-GDN">

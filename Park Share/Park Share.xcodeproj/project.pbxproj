@@ -26,6 +26,8 @@
 		3D91D5632549CCAD00CC740B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91D5622549CCAD00CC740B /* ProfileViewController.swift */; };
 		3D91D56C2549D0C000CC740B /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91D56B2549D0C000CC740B /* VehiclesViewController.swift */; };
 		3D91D5712549D1BB00CC740B /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91D5702549D1BB00CC740B /* VehicleTableViewCell.swift */; };
+		3DC9FAF2255CABEF00D6FD49 /* ChooseVehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9FAF1255CABEF00D6FD49 /* ChooseVehiclesViewController.swift */; };
+		3DC9FAF7255CAC0A00D6FD49 /* ChooseVehiclesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9FAF6255CAC0A00D6FD49 /* ChooseVehiclesTableViewCell.swift */; };
 		3DCD4B582557395D0087EACA /* ChooseAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD4B572557395D0087EACA /* ChooseAreaViewController.swift */; };
 		3DCD4B5D2557397D0087EACA /* ChooseAreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD4B5C2557397D0087EACA /* ChooseAreaTableViewCell.swift */; };
 		3DD193542559B5FF00A4FC87 /* AllParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD193532559B5FF00A4FC87 /* AllParkingViewController.swift */; };
@@ -78,6 +80,8 @@
 		3D91D56B2549D0C000CC740B /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
 		3D91D5702549D1BB00CC740B /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
 		3DA2C5E32549C29B00C55C12 /* Park Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Park Share.entitlements"; sourceTree = "<group>"; };
+		3DC9FAF1255CABEF00D6FD49 /* ChooseVehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseVehiclesViewController.swift; sourceTree = "<group>"; };
+		3DC9FAF6255CAC0A00D6FD49 /* ChooseVehiclesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseVehiclesTableViewCell.swift; sourceTree = "<group>"; };
 		3DCD4B572557395D0087EACA /* ChooseAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAreaViewController.swift; sourceTree = "<group>"; };
 		3DCD4B5C2557397D0087EACA /* ChooseAreaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAreaTableViewCell.swift; sourceTree = "<group>"; };
 		3DD193532559B5FF00A4FC87 /* AllParkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllParkingViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 				3DD193532559B5FF00A4FC87 /* AllParkingViewController.swift */,
 				3DD193582559B61700A4FC87 /* AllParkingTableViewCell.swift */,
 				3DD1935D2559BFBC00A4FC87 /* AreaDetailsViewController.swift */,
+				3DC9FAF1255CABEF00D6FD49 /* ChooseVehiclesViewController.swift */,
+				3DC9FAF6255CAC0A00D6FD49 /* ChooseVehiclesTableViewCell.swift */,
 			);
 			path = RentParking;
 			sourceTree = "<group>";
@@ -414,6 +420,8 @@
 				3D91D5712549D1BB00CC740B /* VehicleTableViewCell.swift in Sources */,
 				3D3B354A2540FAC300D92761 /* SwiftyJSON.swift in Sources */,
 				3D91D5632549CCAD00CC740B /* ProfileViewController.swift in Sources */,
+				3DC9FAF7255CAC0A00D6FD49 /* ChooseVehiclesTableViewCell.swift in Sources */,
+				3DC9FAF2255CABEF00D6FD49 /* ChooseVehiclesViewController.swift in Sources */,
 				3D3B35452540F8D300D92761 /* Variables.swift in Sources */,
 				3DD193592559B61700A4FC87 /* AllParkingTableViewCell.swift in Sources */,
 				3D0C45A2254F4670008D237D /* ListedAreasViewController.swift in Sources */,

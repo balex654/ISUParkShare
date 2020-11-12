@@ -126,6 +126,5 @@ class ChooseAreaViewController: UIViewController, UITableViewDataSource, UITable
         let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
         self.present(alert, animated: true, completion: nil)
-        
     }
 }

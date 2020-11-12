@@ -9,18 +9,24 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.parkshare.backend.dao.ListedParkingRepo;
+import com.parkshare.backend.dao.VehicleRentedAreaRepo;
 import com.parkshare.backend.models.ListedParking;
+import com.parkshare.backend.models.VehicleRentedArea;
 
 @RestController
 public class ListedParkingController {
 	
 	@Autowired
 	ListedParkingRepo rep;
+	
+	@Autowired
+	VehicleRentedAreaRepo relationRep;
 	
 	@RequestMapping(method = RequestMethod.POST, path = "/addListedParking")
 	public void addListedParking(ListedParking parking) {
@@ -41,19 +47,33 @@ public class ListedParkingController {
 		return rep.getUserListedParking(userID);
 	}
 	
-	@RequestMapping(method = RequestMethod.GET, path = "/getAllListedParking")
-	public List<Map<String, Object>> getAllListedParking() {
+	@RequestMapping(method = RequestMethod.GET, path = "/getAllListedParking/{userID}")
+	public List<Map<String, Object>> getAllListedParking(@PathVariable("userID") long userID) {
 		
 		// Get rows, find ones with end_time less than current_time, delete these rows
-		List<Map<String, Object>> rows = rep.getAllListedParking();
+		List<Map<String, Object>> rows = rep.getAllListedParking(userID);
 		List<Map<String, Object>> outdated = findOutdatedRows(rows);
 		
 		for (Map<String, Object> delete : outdated) {
 			rep.deleteListedParking(((BigInteger) delete.get("id")).longValue());
 		}
 		
-		return rep.getAllListedParking();
+		return rep.getAllListedParking(userID);
 	}
+	
+	@RequestMapping(method = RequestMethod.PUT, path = "/updateNumSpots/{id}/{spotsTaken}")
+	public void updateNumSpots(@PathVariable("id") long id, @PathVariable("spotsTaken") int spotsTaken) {
+		rep.updateNumSpots(id, spotsTaken);
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, path = "/userRentedArea/{listedAreaId}")
+	public void userRentedArea(@RequestBody List<Long> vehicleIds, @PathVariable("listedAreaId") long listedAreaId) {
+		for (Long id : vehicleIds) {
+			VehicleRentedArea relation = new VehicleRentedArea(id, listedAreaId);
+			relationRep.save(relation);
+		}
+	}
+	
 	
 	public static List<Map<String, Object>> findOutdatedRows(List<Map<String, Object>> rows) {
 		List<Map<String, Object>> outdated = new ArrayList<Map<String, Object>>();

@@ -23,6 +23,14 @@ create table UserVehicles (
     foreign key(user_id) references User(id) on delete cascade
 );
 
+create table VehicleRentedArea(
+	vehicle_id bigint unique,
+    listed_area_id bigint,
+    primary key(vehicle_id, listed_area_id),
+    foreign key(vehicle_id) references UserVehicles(id) on delete cascade,
+	foreign key(listed_area_id) references ListedParking(id) on delete cascade
+);
+
 create table ParkingArea (
 	id bigint,
     user_id bigint,
