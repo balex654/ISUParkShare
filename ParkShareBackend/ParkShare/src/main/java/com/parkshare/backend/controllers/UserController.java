@@ -1,5 +1,8 @@
 package com.parkshare.backend.controllers;
 
+import java.util.List;
+import java.util.Map;
+
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -61,6 +64,11 @@ public class UserController {
 		}
 		
 		return null;
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, path = "/getRentedAreas/{userID}")
+	public List<Map<String, Object>> getRentedAreas(@PathVariable("userID") long userID) {
+		return rep.getRentedAreas(userID);
 	}
 	
 }

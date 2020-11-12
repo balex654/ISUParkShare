@@ -20,6 +20,7 @@ class AreaDetailsViewController: UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var venmo: UILabel!
     @IBOutlet weak var notes: UILabel!
+    @IBOutlet weak var rent: UIButton!
     
     var addressStr = String()
     var totalSpotsStr = String()
@@ -34,6 +35,8 @@ class AreaDetailsViewController: UIViewController {
     var totalSpotsInt = 0
     var numTakenInt = 0
     var listedAreaId: Int64 = 0
+    
+    var fromRentedAreas = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +57,11 @@ class AreaDetailsViewController: UIViewController {
         venmo.text = venmoStr
         notes.text = notesStr
         notes.sizeToFit()
+        
+        if fromRentedAreas {
+            rent.isHidden = true
+            rent.isUserInteractionEnabled = false
+        }
     }
     
     func showLocation(address: String) {

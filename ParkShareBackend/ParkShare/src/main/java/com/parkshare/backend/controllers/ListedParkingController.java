@@ -74,6 +74,10 @@ public class ListedParkingController {
 		}
 	}
 	
+	@RequestMapping(method = RequestMethod.GET, path = "/getVehiclesInArea/{listedAreaId}")
+	public List<Map<String, Object>> getVehiclesInArea(@PathVariable("listedAreaId") long listedAreaId) {
+		return rep.getVehiclesInArea(listedAreaId);
+	}
 	
 	public static List<Map<String, Object>> findOutdatedRows(List<Map<String, Object>> rows) {
 		List<Map<String, Object>> outdated = new ArrayList<Map<String, Object>>();

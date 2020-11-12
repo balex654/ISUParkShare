@@ -19,6 +19,7 @@ class ChooseAreaViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Choose Area To List"
         getAreas()
     }
 
@@ -82,7 +83,7 @@ class ChooseAreaViewController: UIViewController, UITableViewDataSource, UITable
                     
                     let result = JSON(data).arrayValue
                     for r in result {
-                        if r["id"].int64Value == self.areaSelected["id"] as! Int64 {
+                        if r["area_id"].int64Value == self.areaSelected["id"] as! Int64 {
                             self.alert(message: "You've already listed this address")
                             self.activity.stopAnimating()
                             return
@@ -115,7 +116,7 @@ class ChooseAreaViewController: UIViewController, UITableViewDataSource, UITable
                     self.activity.stopAnimating()
                     return
                 }
-                self.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
                 NotificationCenter.default.post(name: Notification.Name("listedParkingArea"), object: nil)
             }
         }

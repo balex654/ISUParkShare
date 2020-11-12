@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="javax.persistence.SequenceGenerator"/>
-    <fullyQualifiedTypeName name="javax.persistence.Column"/>
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="com.parkshare.backend.dao.UserRepo"/>
     <fullyQualifiedTypeName name="com.parkshare.backend.models.User"/>
@@ -24,14 +23,9 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="com.parkshare.backend.dao.UserVehiclesRepo"/>
-    <fullyQualifiedTypeName name="javax.persistence.Id"/>
     <fullyQualifiedTypeName name="com.parkshare.backend.models.UserVehicles"/>
     <fullyQualifiedTypeName name="com.parkshare.backend.dao.ParkingAreaRepo"/>
     <fullyQualifiedTypeName name="com.parkshare.backend.models.ParkingArea"/>
-    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
-    <fullyQualifiedTypeName name="javax.persistence.Table"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
-    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.parkshare.backend.dao.ListedParkingRepo"/>
@@ -53,4 +47,15 @@
     <fullyQualifiedTypeName name="javax.transaction.Transactional"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Modifying"/>
     <fullyQualifiedTypeName name="java.math.BigInteger"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="javax.persistence.IdClass"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="com.parkshare.backend.dao.VehicleRentedAreaRepo"/>
+    <fullyQualifiedTypeName name="com.parkshare.backend.models.VehicleRentedArea"/>
 </qualifiedTypeNameHistroy>
