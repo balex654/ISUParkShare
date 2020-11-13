@@ -72,7 +72,7 @@ class ParkingAreaViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @IBAction func addArea(_ sender: Any) {
-        let alert = UIAlertController(title: "Add Vehicle", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Add Parking Area", message: nil, preferredStyle: .alert)
         
         alert.addTextField { (UITextField) in
             UITextField.placeholder = "Address"

@@ -117,7 +117,6 @@ class ChooseAreaViewController: UIViewController, UITableViewDataSource, UITable
                     return
                 }
                 self.navigationController?.popViewController(animated: true)
-                NotificationCenter.default.post(name: Notification.Name("listedParkingArea"), object: nil)
             }
         }
         task.resume()

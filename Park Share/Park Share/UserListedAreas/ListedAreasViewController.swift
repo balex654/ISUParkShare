@@ -18,7 +18,6 @@ class ListedAreasViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.addSubview(refreshControl)
-        NotificationCenter.default.addObserver(self, selector: #selector(getListedAreas), name: Notification.Name("listedParkingArea"), object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,7 +59,7 @@ class ListedAreasViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-    @objc func getListedAreas(group: DispatchGroup?) {
+    func getListedAreas(group: DispatchGroup?) {
         let urlStr = Variables.baseURL + "getUserListedParking/" + String(Variables.user.getUserID())
         let request = prepareHTTPRequest(urlStr: urlStr, httpMethod: "GET")
         
