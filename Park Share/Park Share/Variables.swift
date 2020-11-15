@@ -17,3 +17,15 @@ struct Variables {
     
     static var user: UserInfo = UserInfo.init()
 }
+
+/*
+ Demo:
+    Breifly explain the app
+    Account creation
+    Making a parking area
+    Making a vehicle
+    Listing a parking area
+    Rent space
+    View rented spots
+    View vehicles in area
+ */

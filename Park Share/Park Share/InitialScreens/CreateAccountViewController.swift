@@ -94,6 +94,7 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
             self.present(alert, animated: true, completion: nil)
         }
         else if !checkPassword(pw: password.text!) {
+            pwInfoAlert.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(pwInfoAlert, animated: true, completion: nil)
         }
         else if checkInputSizes().count > 0 {
