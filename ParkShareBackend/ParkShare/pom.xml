@@ -68,6 +68,13 @@
 			<version>0.3m</version>
 		</dependency>
 		
+		<!-- Mail -->
+		<dependency>
+			<groupId>com.sendgrid</groupId>
+			<artifactId>sendgrid-java</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>

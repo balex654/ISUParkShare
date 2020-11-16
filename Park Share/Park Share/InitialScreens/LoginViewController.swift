@@ -106,6 +106,49 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func forgotPassword(_ sender: Any) {
+        let alert = UIAlertController(title: "Enter your account email", message: nil, preferredStyle: .alert)
+        alert.addTextField { (UITextField) in
+            UITextField.placeholder = "Email"
+        }
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Enter", style: .default, handler: { action in
+            let email = alert.textFields![0] as UITextField
+            
+            let urlStr = Variables.baseURL + "sendEmail/" + email.text!
+            let request = self.prepareHTTPRequest(urlStr: urlStr, httpMethod: "GET")
+            self.activity.startAnimating()
+            
+            let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+                DispatchQueue.main.async {
+                    guard let data = data else {
+                        self.activity.stopAnimating()
+                        return
+                    }
+                    
+                    let result = JSON(data).dictionaryValue
+                    let userID = result["userID"]!.int64Value
+                    self.activity.stopAnimating()
+                    
+                    if userID == -1 {
+                        let noAccountAlert = UIAlertController(title: "There is no account with the email " + email.text!, message: "Try again", preferredStyle: .alert)
+                        noAccountAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+                        self.present(noAccountAlert, animated: true, completion: nil)
+                    }
+                    else {
+                        let vc = self.storyboard!.instantiateViewController(identifier: "forgotPasswordViewController") as ForgotPasswordViewController
+                        vc.code = result["code"]!.stringValue
+                        vc.userID = userID
+                        self.present(vc, animated: true, completion: nil)
+                    }
+                }
+            }
+            task.resume()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func enableInteraction(enable: Bool) {
         login.isUserInteractionEnabled = enable
         createAccount.isUserInteractionEnabled = enable

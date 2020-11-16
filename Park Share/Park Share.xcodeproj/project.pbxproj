@@ -23,6 +23,7 @@
 		3D4841422533B49C00B1D293 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4841402533B49C00B1D293 /* LaunchScreen.storyboard */; };
 		3D48414D2533B49C00B1D293 /* Park_ShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D48414C2533B49C00B1D293 /* Park_ShareTests.swift */; };
 		3D4841582533B49C00B1D293 /* Park_ShareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4841572533B49C00B1D293 /* Park_ShareUITests.swift */; };
+		3D8ACED32561F42B009143CC /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8ACED22561F42B009143CC /* ForgotPasswordViewController.swift */; };
 		3D91D5632549CCAD00CC740B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91D5622549CCAD00CC740B /* ProfileViewController.swift */; };
 		3D91D56C2549D0C000CC740B /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91D56B2549D0C000CC740B /* VehiclesViewController.swift */; };
 		3D91D5712549D1BB00CC740B /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D91D5702549D1BB00CC740B /* VehicleTableViewCell.swift */; };
@@ -80,6 +81,7 @@
 		3D4841532533B49C00B1D293 /* Park ShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Park ShareUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4841572533B49C00B1D293 /* Park_ShareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park_ShareUITests.swift; sourceTree = "<group>"; };
 		3D4841592533B49C00B1D293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D8ACED22561F42B009143CC /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		3D91D5622549CCAD00CC740B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3D91D56B2549D0C000CC740B /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
 		3D91D5702549D1BB00CC740B /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				3D4841392533B49C00B1D293 /* LoginViewController.swift */,
 				3D3B35612541047900D92761 /* CreateAccountViewController.swift */,
+				3D8ACED22561F42B009143CC /* ForgotPasswordViewController.swift */,
 			);
 			path = InitialScreens;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				3D9C711F255DB5B70000DD7D /* RentedAreasTableViewCell.swift in Sources */,
 				3D9C7117255DB5A70000DD7D /* RentedAreasViewController.swift in Sources */,
 				3DD193542559B5FF00A4FC87 /* AllParkingViewController.swift in Sources */,
+				3D8ACED32561F42B009143CC /* ForgotPasswordViewController.swift in Sources */,
 				3DD1935E2559BFBC00A4FC87 /* AreaDetailsViewController.swift in Sources */,
 				3D4841382533B49C00B1D293 /* SceneDelegate.swift in Sources */,
 				3D0C45A7254F4707008D237D /* ListedAreasTableViewCell.swift in Sources */,
@@ -627,7 +631,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Park Share/Park Share.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = Z254ZTLSS9;
 				INFOPLIST_FILE = "Park Share/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -649,7 +653,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Park Share/Park Share.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = Z254ZTLSS9;
 				INFOPLIST_FILE = "Park Share/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
